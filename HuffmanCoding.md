@@ -7,6 +7,6 @@
                   N.right = PQ.pop
                   N.frequency = N.left.frequency + N.right.frequency
                   PQ.Insert (N)
-	                S = PQ.Size
+	          S = PQ.Size
            end while
      return  PQ.Top
