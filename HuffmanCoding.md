@@ -21,7 +21,7 @@
                   if bit is equal to 1
                       current = current.right
                   if current.right equal to NULL OR current.left equal to NULL
-	           break
+	              break
            end while
         return current.data
 
