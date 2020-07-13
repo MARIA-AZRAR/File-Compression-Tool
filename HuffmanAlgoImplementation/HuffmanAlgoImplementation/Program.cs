@@ -1,12 +1,19 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+
 
 namespace HuffmanAlgoImplementation
 {
     class Program
     {
         Dictionary<char, int> frequencyMap = new Dictionary<char, int>();        //to store frequency     A   4237
-        PQueue.cNode root;                  //root of the huffman tree
+        PQueue.cNode root;
+        int Pseudo_EOF = 254; //root of the huffman tree
 
         //counting frequency and adding in map
         Dictionary<char, int> frequency(String S)
@@ -76,6 +83,47 @@ namespace HuffmanAlgoImplementation
             return pQueue.Top();
         }
 
+        //decompress the file
+
+        void decompress(string fileName, FileStream fs2)
+        {
+            readBitByBit bit = new readBitByBit(fileName);
+            var output = new StreamWriter(fs2);
+            int returnbit = -1;
+            char leaf = '1'; //checking if we reached the end of file
+            PQueue.cNode top = root;
+            while (true)  //will run until we found the pseduo_EOF
+            {
+                if (top.leftZero == null && top.rightOne == null)  //if leaf node is reached
+                {
+                    leaf = top.value;
+                    if (leaf == (char)Pseudo_EOF)   //if it is last letter close the file
+                    {
+                        output.Close();
+                        break;
+                    }
+                    else
+                    {
+                        output.Write(leaf);  //else write in file
+                        top = root;   //again start from root
+                    }
+                }
+                returnbit = bit.bitRead();
+                if (returnbit == 0)  //if not leaf keep on reading the file
+                {
+                    top = top.leftZero;
+                }
+                else if (returnbit == 1)
+                {
+                    top = top.rightOne;
+                }
+            }
+
+            bit.close();
+
+        }
+
+
 
 
         static void Main(string[] args)
@@ -84,6 +132,8 @@ namespace HuffmanAlgoImplementation
              string S;       //Enter string to find the huffman code
              S = Console.ReadLine();
              Console.WriteLine("String Entered: " + S);
+     
+
 
             Dictionary<char, int> Dic = new Dictionary<char, int>();
             Dic = myComp.frequency(S);  //frequency calculated
@@ -96,6 +146,7 @@ namespace HuffmanAlgoImplementation
 
             //creating encooding tree
             myComp.root = myComp.HuffmanEncoding(pQueue);
+       
             Console.ReadKey();
         }
     }
