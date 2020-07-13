@@ -252,8 +252,8 @@ namespace HuffmanAlgoImplementation
             myComp.printCodes(myComp.HuffmanCode);
 
             //writing tree in file
-            top = myComp.root; //temporary storing the value
-            myComp.EncodingTreeWrite(top);
+           // top = myComp.root; //temporary storing the value
+            //myComp.EncodingTreeWrite(top);
 
 
             Console.ReadKey();
