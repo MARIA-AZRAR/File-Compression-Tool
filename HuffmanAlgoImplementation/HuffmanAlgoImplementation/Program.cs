@@ -15,6 +15,8 @@ namespace HuffmanAlgoImplementation
         Dictionary<char, int> frequencyMap = new Dictionary<char, int>();        //to store frequency     A   4237
         PQueue.cNode root;
         int Pseudo_EOF = 254; //root of the huffman tree
+        StreamWriter treeFile;         //file to store tree
+
 
         //counting frequency and adding in map
         Dictionary<char, int> frequency(string fileName)
@@ -132,6 +134,48 @@ namespace HuffmanAlgoImplementation
 
         }
 
+        //Writng decoding tree
+        void EncodingTreeWrite(PQueue.cNode r)
+        {
+            string fileName = "tree.cmu";
+
+            try
+            {
+                // Check if file already exists. If yes, delete it.     
+
+                if (File.Exists(fileName))
+                {
+                    File.Delete(fileName);
+                }
+
+                // Create a new file     
+                treeFile = new StreamWriter(fileName, true, Encoding.ASCII);
+                Write_tree(r);
+                treeFile.Write(254);
+                treeFile.Close();
+
+            }
+            catch (Exception Ex)
+            {
+                Console.WriteLine(Ex.ToString());
+            }
+
+        }
+        //writing tree at the top of decoding file
+        void Write_tree(PQueue.cNode r)
+        {
+            if (r.leftZero == null && r.rightOne == null)
+            {
+                treeFile.Write("0");
+                treeFile.Write(r.value);
+            }
+            else
+            {
+                treeFile.Write("1");
+                Write_tree(r.leftZero);
+                Write_tree(r.rightOne);
+            }
+        }
 
         //decompress the file
 
@@ -207,7 +251,11 @@ namespace HuffmanAlgoImplementation
             myComp.HuffCode(top, "");
             myComp.printCodes(myComp.HuffmanCode);
 
-       
+            //writing tree in file
+            top = myComp.root; //temporary storing the value
+            myComp.EncodingTreeWrite(top);
+
+
             Console.ReadKey();
         }
     }
