@@ -25,6 +25,22 @@ namespace HuffmanAlgoImplementation
             return frequencyMap;
         }
 
+
+
+
+        //printing map
+        void printMap(Dictionary<char, int> Dic)
+        {
+            foreach (KeyValuePair<char, int> kvp in Dic)
+            {
+                Console.WriteLine("Key = {0}, Value = {1}",
+                 kvp.Key, kvp.Value);
+                //  Console.WriteLine("{0} , {1} ", kvp.Key, kvp.Value);
+            }
+            Console.ReadLine();
+
+        }
+
         static void Main(string[] args)
         {
              Program myComp = new Program(); //creating instance of the main file
@@ -34,6 +50,7 @@ namespace HuffmanAlgoImplementation
 
             Dictionary<char, int> Dic = new Dictionary<char, int>();
             Dic = myComp.frequency(S);  //frequency calculated
+            myComp.printMap(Dic);
 
 
 
