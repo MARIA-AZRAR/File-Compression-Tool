@@ -25,9 +25,6 @@ namespace HuffmanAlgoImplementation
             return frequencyMap;
         }
 
-
-
-
         //printing map
         void printMap(Dictionary<char, int> Dic)
         {
@@ -41,6 +38,23 @@ namespace HuffmanAlgoImplementation
 
         }
 
+
+        //entering values in map inside nodes and arranging those nodes in Priority queue with smallest frequencies in front
+
+        PQueue.PriorityQueue nodesinQueue(Dictionary<char, int> Dic)
+        {
+            PQueue.cNode node = new PQueue.cNode(); //node created     
+            PQueue.PriorityQueue pQueue = new PQueue.PriorityQueue();  //queue created
+            foreach (KeyValuePair<char, int> kvp in Dic)   //reading from frequency dictionary
+            {
+                node.value = kvp.Key;
+                node.frequency = kvp.Value;    //setting the values of node
+                pQueue.insertWithPriority(node);   //entering the node
+                node = new PQueue.cNode();
+            }
+            return pQueue;
+        }
+
         static void Main(string[] args)
         {
              Program myComp = new Program(); //creating instance of the main file
@@ -52,7 +66,9 @@ namespace HuffmanAlgoImplementation
             Dic = myComp.frequency(S);  //frequency calculated
             myComp.printMap(Dic);
 
-
+            //entering data in nodes then storing them in queue
+            PQueue.PriorityQueue pQueue = new PQueue.PriorityQueue();
+            pQueue = myComp.nodesinQueue(Dic);
 
             Console.ReadKey();
         }
