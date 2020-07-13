@@ -6,6 +6,7 @@ namespace HuffmanAlgoImplementation
     class Program
     {
         Dictionary<char, int> frequencyMap = new Dictionary<char, int>();        //to store frequency     A   4237
+        PQueue.cNode root;                  //root of the huffman tree
 
         //counting frequency and adding in map
         Dictionary<char, int> frequency(String S)
@@ -55,6 +56,28 @@ namespace HuffmanAlgoImplementation
             return pQueue;
         }
 
+        //building the tree
+        PQueue.cNode HuffmanEncoding(PQueue.PriorityQueue pQueue)
+        {
+            int n = pQueue.count;
+            while (n != 1)
+            {
+                PQueue.cNode node = new PQueue.cNode();
+
+                node.leftZero = pQueue.remove();
+                node.rightOne = pQueue.remove();
+                node.frequency = node.leftZero.frequency + node.rightOne.frequency;
+                node.value = 'a';
+                pQueue.insertWithPriority(node);
+                pQueue.print();
+                Console.WriteLine("Inserted");
+                n = pQueue.count;
+            }
+            return pQueue.Top();
+        }
+
+
+
         static void Main(string[] args)
         {
              Program myComp = new Program(); //creating instance of the main file
@@ -70,6 +93,9 @@ namespace HuffmanAlgoImplementation
             PQueue.PriorityQueue pQueue = new PQueue.PriorityQueue();
             pQueue = myComp.nodesinQueue(Dic);
 
+
+            //creating encooding tree
+            myComp.root = myComp.HuffmanEncoding(pQueue);
             Console.ReadKey();
         }
     }
