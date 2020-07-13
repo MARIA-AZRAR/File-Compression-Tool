@@ -177,6 +177,50 @@ namespace HuffmanAlgoImplementation
             }
         }
 
+
+        //Writng Compress File
+        void WriteCompressFile(FileStream fs)
+        {
+            string fileName = "compress.cmu";
+
+            // Create a new file
+            writeBitByBit bit = new writeBitByBit(fileName);  //creating an instance of bit write
+            var sr = new StreamReader(fs);   //opeining input file to be compreesed so to read from it and compare and store
+            int c;
+            string code = "0";
+            while ((c = sr.Read()) != -1)   //reading char from input file
+            {
+                //Console.WriteLine("char: " + (char)c  + "int: " + c);
+                try   //while calculating frequencies we don't calculate 10 which is LF so we use try to avoid exception when 10 comes as it is not present in the HuffmanCode directory
+                {
+                    code = HuffmanCode[(char)c];   //reading character's huffman code from th Code table
+                }
+                catch
+                {
+
+                }
+                for (int i = 0; i < code.Length; ++i)    //reading each character from the Huffman code  like if code for A = 011 the first 0 then 1 and then 1
+                {
+                    if (code[i] == '0')
+                        bit.BitWrite(0);                //calling writing function with 0 
+                    else
+                        bit.BitWrite(1);               //calling writing function with 1
+
+                }
+            }
+            //now we need to write psedu_EOF so that we don't reed extra bytes from the file
+            code = HuffmanCode[(char)Pseudo_EOF];
+            for (int i = 0; i < code.Length; ++i)    //reading each character from the Huffman code  like if code for A = 011 the first 0 then 1 and then 1
+            {
+                if (code[i] == '0')
+                    bit.BitWrite(0);                //calling writing function with 0 
+                else
+                    bit.BitWrite(1);               //calling writing function with 1
+
+            }
+            bit.close();
+        }
+
         //decompress the file
 
         void decompress(string fileName, FileStream fs2)
@@ -252,8 +296,12 @@ namespace HuffmanAlgoImplementation
             myComp.printCodes(myComp.HuffmanCode);
 
             //writing tree in file
-           // top = myComp.root; //temporary storing the value
+            // top = myComp.root; //temporary storing the value
             //myComp.EncodingTreeWrite(top);
+
+            //compressing file
+            FileStream fs = File.OpenRead(fileName);
+            myComp.WriteCompressFile(fs);
 
 
             Console.ReadKey();
