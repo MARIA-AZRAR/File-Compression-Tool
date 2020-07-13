@@ -11,6 +11,7 @@ namespace HuffmanAlgoImplementation
 {
     class Program
     {
+        Dictionary<char, string> HuffmanCode = new Dictionary<char, string>();   // to store huffman code   A 100001011
         Dictionary<char, int> frequencyMap = new Dictionary<char, int>();        //to store frequency     A   4237
         PQueue.cNode root;
         int Pseudo_EOF = 254; //root of the huffman tree
@@ -24,6 +25,8 @@ namespace HuffmanAlgoImplementation
                 try
                 {
                     frequencyMap.Add(c, 1);     //adding characters in the in dictionary to calculate frequecy if they arent already
+                    HuffmanCode.Add(c, "");     //initializing the code dictionary       
+
                 }
                 catch
                 {
@@ -82,6 +85,47 @@ namespace HuffmanAlgoImplementation
             }
             return pQueue.Top();
         }
+        
+        
+        
+        void HuffCode(PQueue.cNode root, string str)
+        {
+            if (root == null)   //base case
+                return;
+
+            if (root.leftZero == null && root.rightOne == null)    //if we reached at leaf node 
+            {
+                try
+                {
+                    HuffmanCode.Add(root.value, str);     //if it is not already in the Dictionary
+                }
+                catch
+                {
+                    HuffmanCode[root.value] = str;   //if it is in the dictionary just edit 2nd value
+                }
+            }
+            else
+            {
+                HuffCode(root.leftZero, str + "0");   //concatination to form the code
+                HuffCode(root.rightOne, str + "1");
+            }
+        }
+
+
+
+        //printing map
+        void printCodes(Dictionary<char, string> Dic)
+        {
+            foreach (KeyValuePair<char, string> kvp in Dic)
+            {
+                Console.WriteLine("Value       = {0}, Codes            = {1}",
+                 kvp.Key, kvp.Value);
+                //  Console.WriteLine("{0} , {1} ", kvp.Key, kvp.Value);
+            }
+            Console.ReadLine();
+
+        }
+
 
         //decompress the file
 
@@ -146,6 +190,14 @@ namespace HuffmanAlgoImplementation
 
             //creating encooding tree
             myComp.root = myComp.HuffmanEncoding(pQueue);
+            
+            
+            PQueue.cNode top = myComp.root; //temporary storing the value
+
+            Console.WriteLine(top.getValue());
+            myComp.HuffCode(top, "");
+            myComp.printCodes(myComp.HuffmanCode);
+
        
             Console.ReadKey();
         }
