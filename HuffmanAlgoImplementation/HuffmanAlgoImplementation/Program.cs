@@ -17,22 +17,28 @@ namespace HuffmanAlgoImplementation
         int Pseudo_EOF = 254; //root of the huffman tree
 
         //counting frequency and adding in map
-        Dictionary<char, int> frequency(String S)
+        Dictionary<char, int> frequency(string fileName)
         {
+            FileStream fs = File.OpenRead(fileName);  //opening file
 
-            foreach (char c in S)
+            var sr = new StreamReader(fs);  //opening file
+            int c;
+            while ((c = sr.Read()) != -1)               //reading character 8 bits from file as int and converting it in char
             {
                 try
                 {
-                    frequencyMap.Add(c, 1);     //adding characters in the in dictionary to calculate frequecy if they arent already
-                    HuffmanCode.Add(c, "");     //initializing the code dictionary       
-
+                    frequencyMap.Add((char)c, 1);     //adding characters in the in dictionary to calculate frequecy if they arent already
+                    HuffmanCode.Add((char)c, "");     //initializing the code dictionary       
                 }
                 catch
                 {
-                    frequencyMap[c] += 1; //if they are in the dictionary just plus there frequency
+                    frequencyMap[(char)c] += 1; //if they are in the dictionary just plus there frequency
                 }
+
             }
+            frequencyMap.Add((char)Pseudo_EOF, 1);
+            sr.Close();
+            fs.Close();
             return frequencyMap;
         }
 
@@ -173,14 +179,17 @@ namespace HuffmanAlgoImplementation
         static void Main(string[] args)
         {
              Program myComp = new Program(); //creating instance of the main file
-             string S;       //Enter string to find the huffman code
-             S = Console.ReadLine();
-             Console.WriteLine("String Entered: " + S);
-     
+                                             //string S;       //Enter string to find the huffman code
+                                             //S = Console.ReadLine();
+                                             //  Console.WriteLine("String Entered: " + S);
+
+            Console.WriteLine("Enter File Name: ");
+            var fileName = Console.ReadLine();
+            Console.WriteLine(fileName);
 
 
             Dictionary<char, int> Dic = new Dictionary<char, int>();
-            Dic = myComp.frequency(S);  //frequency calculated
+            Dic = myComp.frequency(fileName);  //frequency calculated
             myComp.printMap(Dic);
 
             //entering data in nodes then storing them in queue
