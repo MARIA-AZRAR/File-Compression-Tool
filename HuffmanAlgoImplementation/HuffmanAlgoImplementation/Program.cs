@@ -35,6 +35,8 @@ namespace HuffmanAlgoImplementation
             Dictionary<char, int> Dic = new Dictionary<char, int>();
             Dic = myComp.frequency(S);  //frequency calculated
 
+
+
             Console.ReadKey();
         }
     }
