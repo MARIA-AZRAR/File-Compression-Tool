@@ -1,3 +1,3 @@
 It was found out that after storing the bits denoted particular characters the file stores the garbage value to complete the byte of a character.
 so, to solve that bug defined a variable PSEUDO_EOF of int datatype and stores a value that cannot be ocurr for character storation like 254, or some 
-large value can also be stored. So, as long as file encoding hits that value the file ended. Basically, the PSEUDO_EOF marks the end of the encoding.  
+large value can also be stored. So, as long as file encoding hits that value the file ended. Basically, the PSEUDO_EOF marks the end of the encoding.
