@@ -1,0 +1,42 @@
+﻿<Window x:Name="Heading" x:Class="Practice.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practice"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d" FontSize="20" 
+        Title="MainWindow" Height="450" Width="800">
+    <!--Global Style-->
+    <Grid Margin="10,0,-8,7">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
+            <!--dont write it as it is it hardcoded and will not be responsive-->
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+            <!--* (star) take up any available remaining space when prefixed with no like 0.07* means 7 percent of space taken-->
+            <ColumnDefinition Width="20" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="Heading1" Grid.Column="2" Grid.Row="1" Margin="33,0,195,10"
+                   Text="Compression Tool" FontSize="50" FontFamily="Segoe UI Light" Grid.ColumnSpan="3"></TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="2" Text="Compress File" FontWeight="Heavy" Height="36" VerticalAlignment="Bottom" />
+        <TextBox x:Name="Fname" Grid.Column="2" Grid.Row="2" Width="200"  />
+        <Button x:Name="submit" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" Content="Upload" Margin="10,10,10,180" Click="Submit_Click" Height="Auto" Grid.RowSpan="4" />
+        <Button x:Name="save" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" Content="Save" Margin="10,101,10,94" Click="Save_Click" Height="Auto" />
+        <Button x:Name="compress" Grid.Column="3" Grid.Row="3" Grid.ColumnSpan="2" Content="Compress" Margin="0,10,110,180" Click="Compress_Click" Height="Auto" Grid.RowSpan="4" />
+        <Button x:Name="switch" Grid.Column="2" Grid.Row="6" Content="Switch" Margin="199,101,110,94" Click="Switch_Click_1" RenderTransformOrigin="0.5,1.359" Grid.ColumnSpan="3" Height="Auto" />
+
+    </Grid>
+</Window>
