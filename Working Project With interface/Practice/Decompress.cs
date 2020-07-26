@@ -15,6 +15,7 @@ namespace Practice
 
         PQueue.cNode FileTreeroot;                  //root of the huffman tree
         Compress program = new Compress();
+        public string decmpFile;
 
 
         //decompress the file
@@ -23,7 +24,6 @@ namespace Practice
         {
             readBitByBit bit = new readBitByBit(fileName);
             FileTreeroot = ReadTreeHeader(bit);
-            Console.WriteLine("insode decompress");
             program.printPreorder(FileTreeroot);
             var output = new StreamWriter(fs2);
             int returnbit = -1;
@@ -116,7 +116,7 @@ namespace Practice
 
             //create pdf
             Document document = new Document(PageSize.A4, 50, 35, 50, 35);
-            PdfWriter pdfWriter = PdfWriter.GetInstance(document, new FileStream("decompress.pdf", FileMode.Create));
+            PdfWriter pdfWriter = PdfWriter.GetInstance(document, new FileStream(decmpFile, FileMode.Create));  
             document.Open();
             Paragraph p = new Paragraph();
             p.Font = FontFactory.GetFont(FontFactory.TIMES_ROMAN, 12f, BaseColor.BLACK);

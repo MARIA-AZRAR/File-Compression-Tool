@@ -26,15 +26,21 @@ namespace Practice
             InitializeComponent();
         }
 
+        string fileName = null;  //Global  //file to be decompressed
+        string fileExt;
+        Compress myObj = new Compress();
+        Decompress decomp = new Decompress();
+        string content;
+
         private void Submit_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFile = new OpenFileDialog();
             bool? response = openFile.ShowDialog();  //this return a nulllable
             if (response == true)
             {
-                string filePath = openFile.FileName;
-                MessageBox.Show(filePath);
-
+                fileName = openFile.FileName;           //compressed file
+                fileExt = System.IO.Path.GetExtension(openFile.FileName);
+                MessageBox.Show(System.IO.Path.GetExtension(openFile.FileName));
             }
         }
 
@@ -42,16 +48,29 @@ namespace Practice
         {
             SaveFileDialog saveFile = new SaveFileDialog();
             saveFile.FileName = "Codes"; ;
-            saveFile.DefaultExt = ".cmp";
+            saveFile.DefaultExt = ".txt";
             // saveFile.Filter = "Text documents (.txt)|*.txt";
 
             bool? response = saveFile.ShowDialog();
             if (response == true)
             {
-                string filename = saveFile.FileName;
-                FileStream fs = File.Create(filename);
-                MessageBox.Show(filename);
+                decomp.decmpFile = saveFile.FileName;   //file name after decompress
+                //Decompressing file
+                if (fileExt == ".pdf")
+                {
+
+                    //decompress
+                     decomp.pdfDecompress(fileName);  //given compressed file to decompress
+                }
+                else
+                {
+                       FileStream fs2 = File.Create(decomp.decmpFile);
+                       decomp.decompress(fileName, fs2);
+                }
+
+                MessageBox.Show("Decompression done");
             }
+            //MessageBox.Show(myObj.CompName);
         }
 
         private void Decompress_Click(object sender, RoutedEventArgs e)

@@ -60,7 +60,7 @@ namespace Practice
             if(response == true)
             {
                 myObj.CompName = saveFile.FileName;
-                //  FileStream fs = File.Create(Came);
+                //FileStream fs1 = File.Create(myObj.CompName);
 
                 //compressing file
                 if(fileExt == ".pdf")
@@ -86,7 +86,9 @@ namespace Practice
 
             if (fileExt == ".txt" || fileExt == ".csv" || fileExt == ".cpp")
             {
+
                 FileStream fs = File.OpenRead(fileName);
+
                 Dictionary<char, int> Dic = new Dictionary<char, int>();
                 // Dic = myObj.frequency(fs);
                 Dic = myObj.frequency(fs);
@@ -117,13 +119,6 @@ namespace Practice
                 //Console.WriteLine("Tree Printed");
 
                 //fileCompress in button save
-
-
-                /*   string deFile = "Decompress.txt";
-                   FileStream fs2 = File.Create(deFile);
-
-                   fileName = "compress.cmu";
-                   decomp.decompress(fileName, fs2);*/
             }
           
             else if (fileExt == ".pdf")
@@ -164,9 +159,6 @@ namespace Practice
                 myObj.HuffCode(top, "");
                myObj.printCodes(myObj.HuffmanCode);
 
-                //decompress
-               // string fileName = "compress.cmu";
-               // decomp.pdfDecompress(fileName);
             }
 
            // myObj.comleteFlag = 1;

@@ -24,3 +24,5 @@ C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Practice\Practice\obj\D
 C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Practice\Practice\obj\Debug\Window1.baml
 C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Practice\Practice\bin\Debug\itextsharp.dll
 C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Practice\Practice\bin\Debug\itextsharp.xml
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\Working Project With interface\Practice\obj\Debug\Practice.exe
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\Working Project With interface\Practice\obj\Debug\Practice.pdb

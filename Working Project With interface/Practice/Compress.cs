@@ -27,10 +27,11 @@ namespace Practice
         public Dictionary<char, int> frequency(FileStream fs)
         {
             var sr = new StreamReader(fs);  //opening file
+
             int c;
             while ((c = sr.Read()) != -1)               //reading character 8 bits from file as int and converting it in char
             {
-                //Console.Write((char)c);
+                Console.Write((char)c);
                 //Console.WriteLine("char: " + (char)c + "int: " + c);
                 //if (c != 10){
                 try
@@ -263,10 +264,10 @@ namespace Practice
         //Writng Compress File
         public void PDFCompressFile(string content)
         {
-            string fileName = "compressed.cmu";
+            //string fileName = "compressed.cmu";
 
             // Create a new file
-            writeBitByBit bit = new writeBitByBit(fileName);  //creating an instance of bit write
+            writeBitByBit bit = new writeBitByBit(CompName);  //creating an instance of bit write
 
             //writing tree info
             PQueue.cNode top = root;
