@@ -1,0 +1,65 @@
+C:\Users\Sidra khan\Desktop\huffmanInterface\huffmanInterface\bin\Debug\huffmanInterface.exe.config
+C:\Users\Sidra khan\Desktop\huffmanInterface\huffmanInterface\bin\Debug\huffmanInterface.exe
+C:\Users\Sidra khan\Desktop\huffmanInterface\huffmanInterface\bin\Debug\huffmanInterface.pdb
+C:\Users\Sidra khan\Desktop\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface.csprojAssemblyReference.cache
+C:\Users\Sidra khan\Desktop\huffmanInterface\huffmanInterface\obj\Debug\MainWindow.g.cs
+C:\Users\Sidra khan\Desktop\huffmanInterface\huffmanInterface\obj\Debug\App.g.cs
+C:\Users\Sidra khan\Desktop\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface_MarkupCompile.cache
+C:\Users\Sidra khan\Desktop\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface_MarkupCompile.lref
+C:\Users\Sidra khan\Desktop\huffmanInterface\huffmanInterface\obj\Debug\MainWindow.baml
+C:\Users\Sidra khan\Desktop\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface.g.resources
+C:\Users\Sidra khan\Desktop\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface.Properties.Resources.resources
+C:\Users\Sidra khan\Desktop\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface.csproj.GenerateResource.cache
+C:\Users\Sidra khan\Desktop\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface.csproj.CoreCompileInputs.cache
+C:\Users\Sidra khan\Desktop\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface.exe
+C:\Users\Sidra khan\Desktop\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface.pdb
+C:\Users\Sidra khan\Desktop\huffmanInterface\huffmanInterface\obj\Debug\Window1.g.cs
+C:\Users\Sidra khan\Desktop\huffmanInterface\huffmanInterface\obj\Debug\Window1.baml
+C:\Users\Sidra khan\Desktop\huffmanInterface\huffmanInterface\obj\Debug\compressForm.g.cs
+C:\Users\Sidra khan\Desktop\huffmanInterface\huffmanInterface\obj\Debug\decompressForm.g.cs
+C:\Users\Sidra khan\Desktop\huffmanInterface\huffmanInterface\obj\Debug\App.baml
+C:\Users\Sidra khan\Desktop\CS311S20PID36\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface.csprojAssemblyReference.cache
+C:\Users\Sidra khan\Desktop\CS311S20PID36\huffmanInterface\huffmanInterface\obj\Debug\compressForm.g.cs
+C:\Users\Sidra khan\Desktop\CS311S20PID36\huffmanInterface\huffmanInterface\obj\Debug\decompressForm.g.cs
+C:\Users\Sidra khan\Desktop\CS311S20PID36\huffmanInterface\huffmanInterface\obj\Debug\MainWindow.g.cs
+C:\Users\Sidra khan\Desktop\CS311S20PID36\huffmanInterface\huffmanInterface\obj\Debug\App.g.cs
+C:\Users\Sidra khan\Desktop\CS311S20PID36\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface_MarkupCompile.cache
+C:\Users\Sidra khan\Desktop\CS311S20PID36\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface_MarkupCompile.lref
+C:\Users\Sidra khan\Desktop\CS311S20PID36\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface.exe
+C:\Users\Sidra khan\Desktop\CS311S20PID36\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface.pdb
+C:\Users\Sidra khan\Desktop\CS311S20PID36\huffmanInterface\huffmanInterface\bin\Debug\huffmanInterface.exe.config
+C:\Users\Sidra khan\Desktop\CS311S20PID36\huffmanInterface\huffmanInterface\bin\Debug\huffmanInterface.exe
+C:\Users\Sidra khan\Desktop\CS311S20PID36\huffmanInterface\huffmanInterface\bin\Debug\huffmanInterface.pdb
+C:\Users\Sidra khan\Desktop\CS311S20PID36\huffmanInterface\huffmanInterface\obj\Debug\App.baml
+C:\Users\Sidra khan\Desktop\CS311S20PID36\huffmanInterface\huffmanInterface\obj\Debug\buttonTheme.baml
+C:\Users\Sidra khan\Desktop\CS311S20PID36\huffmanInterface\huffmanInterface\obj\Debug\compressForm.baml
+C:\Users\Sidra khan\Desktop\CS311S20PID36\huffmanInterface\huffmanInterface\obj\Debug\decompressForm.baml
+C:\Users\Sidra khan\Desktop\CS311S20PID36\huffmanInterface\huffmanInterface\obj\Debug\MainWindow.baml
+C:\Users\Sidra khan\Desktop\CS311S20PID36\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface.g.resources
+C:\Users\Sidra khan\Desktop\CS311S20PID36\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface.Properties.Resources.resources
+C:\Users\Sidra khan\Desktop\CS311S20PID36\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface.csproj.GenerateResource.cache
+C:\Users\Sidra khan\Desktop\CS311S20PID36\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface.csproj.CoreCompileInputs.cache
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Interfaces\huffmanInterface\huffmanInterface\bin\Debug\huffmanInterface.exe.config
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Interfaces\huffmanInterface\huffmanInterface\bin\Debug\huffmanInterface.exe
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Interfaces\huffmanInterface\huffmanInterface\bin\Debug\huffmanInterface.pdb
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Interfaces\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface.csprojAssemblyReference.cache
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Interfaces\huffmanInterface\huffmanInterface\obj\Debug\compressForm.g.cs
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Interfaces\huffmanInterface\huffmanInterface\obj\Debug\decompressForm.g.cs
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Interfaces\huffmanInterface\huffmanInterface\obj\Debug\MainWindow.g.cs
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Interfaces\huffmanInterface\huffmanInterface\obj\Debug\App.g.cs
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Interfaces\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface_MarkupCompile.cache
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Interfaces\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface_MarkupCompile.lref
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Interfaces\huffmanInterface\huffmanInterface\obj\Debug\App.baml
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Interfaces\huffmanInterface\huffmanInterface\obj\Debug\buttonTheme.baml
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Interfaces\huffmanInterface\huffmanInterface\obj\Debug\compressForm.baml
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Interfaces\huffmanInterface\huffmanInterface\obj\Debug\decompressForm.baml
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Interfaces\huffmanInterface\huffmanInterface\obj\Debug\MainWindow.baml
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Interfaces\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface.g.resources
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Interfaces\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface.Properties.Resources.resources
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Interfaces\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface.csproj.GenerateResource.cache
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Interfaces\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface.csproj.CoreCompileInputs.cache
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Interfaces\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface.exe
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Interfaces\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface.pdb
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Interfaces\huffmanInterface\huffmanInterface\bin\Debug\itextsharp.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Interfaces\huffmanInterface\huffmanInterface\bin\Debug\itextsharp.xml
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Interfaces\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface.csproj.CopyComplete
