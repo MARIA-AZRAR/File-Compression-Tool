@@ -13,10 +13,10 @@ namespace HuffmanAlgoImplementation
     {
         Dictionary<char, string> HuffmanCode = new Dictionary<char, string>();   // to store huffman code   A 100001011
         Dictionary<char, int> frequencyMap = new Dictionary<char, int>();        //to store frequency     A   4237
-        PQueue.cNode root;
-        int Pseudo_EOF = 254; //root of the huffman tree
+        public int Pseudo_EOF = 254;                                                    //special char to be added at the last
+        PQueue.cNode root;                  //root of the huffman tree
         StreamWriter treeFile;         //file to store tree
-
+        StreamWriter compressFile;         //file to store CompreesFiles
 
         //counting frequency and adding in map
         Dictionary<char, int> frequency(string fileName)
@@ -220,48 +220,6 @@ namespace HuffmanAlgoImplementation
             }
             bit.close();
         }
-
-        //decompress the file
-
-        void decompress(string fileName, FileStream fs2)
-        {
-            readBitByBit bit = new readBitByBit(fileName);
-            var output = new StreamWriter(fs2);
-            int returnbit = -1;
-            char leaf = '1'; //checking if we reached the end of file
-            PQueue.cNode top = root;
-            while (true)  //will run until we found the pseduo_EOF
-            {
-                if (top.leftZero == null && top.rightOne == null)  //if leaf node is reached
-                {
-                    leaf = top.value;
-                    if (leaf == (char)Pseudo_EOF)   //if it is last letter close the file
-                    {
-                        output.Close();
-                        break;
-                    }
-                    else
-                    {
-                        output.Write(leaf);  //else write in file
-                        top = root;   //again start from root
-                    }
-                }
-                returnbit = bit.bitRead();
-                if (returnbit == 0)  //if not leaf keep on reading the file
-                {
-                    top = top.leftZero;
-                }
-                else if (returnbit == 1)
-                {
-                    top = top.rightOne;
-                }
-            }
-
-            bit.close();
-
-        }
-
-
 
 
         static void Main(string[] args)
