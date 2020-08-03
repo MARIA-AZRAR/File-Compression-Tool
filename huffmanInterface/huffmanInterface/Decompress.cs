@@ -130,7 +130,7 @@ namespace huffmanInterface
 
             if(fileExten == ".docx" || fileExten == ".doc"){
                 var doc = DocX.Create(decmpFile);
-                doc.InsertParagraph(newC).Font("Times New Roman").FontSize(12d).Alignment = Xceed.Document.NET.Alignment.center;  //inserting paragraph
+                doc.InsertParagraph(newC).Font("Times New Roman").FontSize(12d);  //inserting paragraph
                 doc.Save();
             }
 
