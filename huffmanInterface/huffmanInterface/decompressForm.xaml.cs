@@ -89,16 +89,15 @@ namespace huffmanInterface
         private void SaveDecompressFile_Click(object sender, RoutedEventArgs e)
         {
             SaveFileDialog saveFile = new SaveFileDialog();
-            saveFile.FileName = "Codes"; ;
-            saveFile.DefaultExt = ".txt";
-            // saveFile.Filter = "Text documents (.txt)|*.txt";
+            saveFile.FileName = "Decompressed"; ;
+            saveFile.DefaultExt = fileExt;
 
             bool? response = saveFile.ShowDialog();
             if (response == true)
             {
                 decomp.decmpFile = saveFile.FileName;   //file name after decompress
                 //Decompressing file
-                if (fileExt == ".pdf")
+                if (fileExt == ".pdf" || fileExt == ".docx" || fileExt == ".doc")
                 {
 
                     //decompress
@@ -124,6 +123,7 @@ namespace huffmanInterface
             {
                 fileName = openFile.FileName;           //compressed file
                 fileExt = System.IO.Path.GetExtension(openFile.FileName);
+                decomp.fileExten = fileExt;
                 MessageBox.Show(System.IO.Path.GetExtension(openFile.FileName));
             }
         }

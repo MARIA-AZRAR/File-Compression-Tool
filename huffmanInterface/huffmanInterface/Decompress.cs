@@ -7,6 +7,7 @@ using System.IO;
 using iTextSharp.text;
 using iTextSharp.text.pdf.parser;
 using iTextSharp.text.pdf;
+using Xceed.Words.NET;
 
 namespace huffmanInterface
 {
@@ -15,6 +16,7 @@ namespace huffmanInterface
         PQueue.cNode FileTreeroot;                  //root of the huffman tree
         Compress program = new Compress();
         public string decmpFile;
+        public string fileExten;   // file extension stoing var
 
 
         //decompress the file
@@ -114,6 +116,7 @@ namespace huffmanInterface
             }
 
             //create pdf
+            if (fileExten == ".pdf"){
             Document document = new Document(PageSize.A4, 50, 35, 50, 35);
             PdfWriter pdfWriter = PdfWriter.GetInstance(document, new FileStream(decmpFile, FileMode.Create));
             document.Open();
@@ -122,6 +125,15 @@ namespace huffmanInterface
             p.Add(newC);
             document.Add(p);
             document.Close();
+            }
+   
+
+            if(fileExten == ".docx" || fileExten == ".doc"){
+                var doc = DocX.Create(decmpFile);
+                doc.InsertParagraph(newC).Font("Times New Roman").FontSize(12d).Alignment = Xceed.Document.NET.Alignment.center;  //inserting paragraph
+                doc.Save();
+            }
+
         }
 
 

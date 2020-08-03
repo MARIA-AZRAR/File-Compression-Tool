@@ -16,6 +16,8 @@ using iTextSharp.text.pdf.parser;
 using iTextSharp.text;
 using Microsoft.Win32;
 using System.IO;
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Wordprocessing;
 
 namespace huffmanInterface
 {
@@ -105,7 +107,62 @@ namespace huffmanInterface
             string filename = fileName;
             //myObj.comleteFlag = 0;
 
-            if (fileExt == ".txt" || fileExt == ".csv" || fileExt == ".cpp")
+          
+            if (fileExt == ".pdf" || fileExt == ".docx" || fileExt == ".doc")
+            {
+                if (fileExt == ".docx" || fileExt == ".doc")
+                {
+
+
+                    // Open a WordprocessingDocument based on a filepath.
+                    using (WordprocessingDocument wordDocument =
+                        WordprocessingDocument.Open(fileName, false))
+                    {
+                        // Assign a reference to the existing document body.  
+                        Body body = wordDocument.MainDocumentPart.Document.Body;
+
+                        //Saving the text of Docx file in a strin content
+                        content =  body.InnerText.ToString();
+                    }
+                }
+                if(fileExt == ".pdf")
+                {
+                    StringBuilder fileContent = new StringBuilder();
+                    using (PdfReader pdfReader = new PdfReader(filename))
+                    {
+                        for (int k = 1; k <= pdfReader.NumberOfPages; k++)
+                        {
+                            fileContent.Append(PdfTextExtractor.GetTextFromPage(pdfReader, k));
+                        }
+                    }
+                    content = fileContent.ToString();
+                }
+                //string content;
+
+                Dictionary<char, int> Dic = new Dictionary<char, int>();
+                Dic = myObj.frequencyPDF(content);
+                myObj.printMap(Dic);
+
+                //getting frequency
+
+
+                //entering data in nodes then storing them in queue
+                PQueue.PriorityQueue pQueue = new PQueue.PriorityQueue();
+                pQueue = myObj.nodesinQueue(Dic);
+
+                //  pQueue.print();
+
+                //creating encooding tree
+                myObj.root = myObj.HuffmanEncoding(pQueue);
+
+                PQueue.cNode top = myObj.root; //temporary storing the value
+
+                // Console.WriteLine(top.getValue());
+                myObj.HuffCode(top, "");
+                myObj.printCodes(myObj.HuffmanCode);
+
+            }
+            else
             {
 
                 FileStream fs = File.OpenRead(fileName);
@@ -137,50 +194,10 @@ namespace huffmanInterface
                 //top = myObj.root; //temporary storing the value
                 //myObj.EncodingTreeWrite(top);
                 top = myObj.root; //temporary storing the value
-                                  //  myObj.printPreorder(top);
-                                  //Console.WriteLine("Tree Printed");
+                //  myObj.printPreorder(top);
+                 //Console.WriteLine("Tree Printed");
 
                 //fileCompress in button save
-            }
-
-            else if (fileExt == ".pdf")
-            {
-
-                //string content;
-
-                StringBuilder fileContent = new StringBuilder();
-                using (PdfReader pdfReader = new PdfReader(filename))
-                {
-                    for (int k = 1; k <= pdfReader.NumberOfPages; k++)
-                    {
-                        fileContent.Append(PdfTextExtractor.GetTextFromPage(pdfReader, k));
-                    }
-                }
-                content = fileContent.ToString();
-
-
-                Dictionary<char, int> Dic = new Dictionary<char, int>();
-                Dic = myObj.frequencyPDF(content);
-                myObj.printMap(Dic);
-
-                //getting frequency
-
-
-                //entering data in nodes then storing them in queue
-                PQueue.PriorityQueue pQueue = new PQueue.PriorityQueue();
-                pQueue = myObj.nodesinQueue(Dic);
-
-                //  pQueue.print();
-
-                //creating encooding tree
-                myObj.root = myObj.HuffmanEncoding(pQueue);
-
-                PQueue.cNode top = myObj.root; //temporary storing the value
-
-                // Console.WriteLine(top.getValue());
-                myObj.HuffCode(top, "");
-                myObj.printCodes(myObj.HuffmanCode);
-
             }
 
             // myObj.comleteFlag = 1;
@@ -192,7 +209,7 @@ namespace huffmanInterface
         {
             SaveFileDialog saveFile = new SaveFileDialog();
             saveFile.FileName = "Codes"; ;
-            saveFile.DefaultExt = ".cmp";
+            saveFile.DefaultExt = fileExt;
             // saveFile.Filter = "Text documents (.txt)|*.txt";
 
             bool? response = saveFile.ShowDialog();
@@ -202,7 +219,7 @@ namespace huffmanInterface
                 //FileStream fs1 = File.Create(myObj.CompName);
 
                 //compressing file
-                if (fileExt == ".pdf")
+                if (fileExt == ".pdf" || fileExt == ".docx" || fileExt == ".doc")
                 {
                     //compress file
                     myObj.PDFCompressFile(content);
