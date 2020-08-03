@@ -128,7 +128,7 @@
 
     <Grid>
         <Grid Background="Transparent" >
-            <Border CornerRadius="10" Grid.RowSpan="2" RenderTransformOrigin="0.466,0.495">
+            <Border CornerRadius="10" Grid.RowSpan="2" RenderTransformOrigin="0.478,0.432">
                 <Border.Background>
 
                     <LinearGradientBrush>
@@ -139,7 +139,7 @@
 
                 </Border.Background>
             </Border>
-            <StackPanel VerticalAlignment="Top"  >
+            <StackPanel VerticalAlignment="Top" Height="242" Margin="0,-69,0,0"  >
                 <TextBlock Text="File Compression Tool"
                           FontWeight="UltraBold"
                           FontFamily="Giddyup Std"
@@ -153,7 +153,7 @@
                           HorizontalAlignment="Center" RenderTransformOrigin="0.51,1.107"/>
             </StackPanel>
 
-            <StackPanel VerticalAlignment="Center"  >
+            <StackPanel VerticalAlignment="Center" Height="230" Margin="0,52,0,318"  >
                 <TextBlock Text="   W E L C O M E"
                           FontWeight="UltraBold"
                           FontFamily="Letter Gothic Std"
@@ -164,6 +164,34 @@
                            Margin="201,150,190,70"
                            Padding="20,20,20,20"
                           HorizontalAlignment="Center" Width="409" RenderTransformOrigin="0.936,0.501"/>
+            </StackPanel>
+            <StackPanel VerticalAlignment="Center" Height="233" Margin="-30,50,0,92"  >
+                <TextBlock Text="*Instructions
+                           "
+                          FontWeight ="Medium"
+                          FontFamily="Letter Gothic Std"
+                          FontSize="25"
+                           FontStretch="UltraExpanded"
+                           TextWrapping="Wrap"
+                          Foreground="#FF9AF9F9"
+                           Margin="0,150,190,70"
+                           Padding="20,20,20,20"
+                          HorizontalAlignment="Center" Width="409" RenderTransformOrigin="0.936,0.501"/>
+            </StackPanel>
+
+            <StackPanel VerticalAlignment="Center" Height="368" Margin="-10,202,0,30"  >
+                <TextBlock Text="-It can compress .txt, .cpp, .c, .cs, .docx, .doc, .pdf, .csv      
+                                  -File To be Compressed should be greater than 250 bytes.
+                                   -PDF or .docx can't have images. "
+                          FontWeight ="Medium"
+                          FontFamily="Arial"
+                          FontSize="15"
+                           FontStretch="UltraExpanded"
+                           TextWrapping="Wrap"
+                          Foreground="#FF9AF9F9"
+                           Margin="104,150,270,70"
+                           Padding="20,20,20,20"
+                          HorizontalAlignment="Center" Width="436" RenderTransformOrigin="0.936,0.501" Height="201"/>
             </StackPanel>
 
             <!--App Close Button-->
