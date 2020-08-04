@@ -20,6 +20,10 @@ namespace huffmanInterface
         public string CompName;   //compressed file name
         public int comleteFlag;
 
+
+
+
+
         //counting frequency and adding in map
         public Dictionary<char, int> frequency(FileStream fs)
         {
@@ -28,9 +32,7 @@ namespace huffmanInterface
             int c;
             while ((c = sr.Read()) != -1)               //reading character 8 bits from file as int and converting it in char
             {
-                Console.Write((char)c);
-                //Console.WriteLine("char: " + (char)c + "int: " + c);
-                //if (c != 10){
+              
                 try
                 {
                     frequencyMap.Add((char)c, 1);     //adding characters in the in dictionary to calculate frequecy if they arent already
@@ -45,6 +47,10 @@ namespace huffmanInterface
 
             }
 
+
+            //Console.Write((char)c);
+            //Console.WriteLine("char: " + (char)c + "int: " + c);
+            //if (c != 10){
             frequencyMap.Add((char)Pseudo_EOF, 1);
             sr.Close();
             fs.Close();
