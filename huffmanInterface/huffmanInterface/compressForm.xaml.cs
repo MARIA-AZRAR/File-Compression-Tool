@@ -226,8 +226,18 @@ namespace huffmanInterface
                 }
                 else
                 {
-                    FileStream fs = File.OpenRead(fileName);
-                    myObj.WriteCompressFile(fs);
+                    FileStream fs;
+                    try
+                    {
+                        fs = File.OpenRead(fileName);
+                        myObj.WriteCompressFile(fs);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("You have not uploaded any file.");
+                        throw new ArgumentException("A file should be uploaded.");
+                    }
+                    
                 }
 
                 MessageBox.Show(myObj.CompName);

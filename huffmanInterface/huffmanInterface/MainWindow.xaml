@@ -182,16 +182,17 @@
             <StackPanel VerticalAlignment="Center" Height="368" Margin="-10,202,0,30"  >
                 <TextBlock Text="-It can compress .txt, .cpp, .c, .cs, .docx, .doc, .pdf, .csv      
                                   -File To be Compressed should be greater than 250 bytes.
-                                   -PDF or .docx can't have images. "
+                                   -PDF or .docx files can't have images. 
+                                   -Once Compression Done Dialogue appears then save file."
                           FontWeight ="Medium"
                           FontFamily="Arial"
                           FontSize="15"
                            FontStretch="UltraExpanded"
                            TextWrapping="Wrap"
                           Foreground="#FF9AF9F9"
-                           Margin="104,150,270,70"
+                           Margin="104,150,263,70"
                            Padding="20,20,20,20"
-                          HorizontalAlignment="Center" Width="436" RenderTransformOrigin="0.936,0.501" Height="201"/>
+                          HorizontalAlignment="Center" Width="443" RenderTransformOrigin="0.936,0.501" Height="201"/>
             </StackPanel>
 
             <!--App Close Button-->

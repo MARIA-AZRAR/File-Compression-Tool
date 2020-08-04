@@ -16,7 +16,17 @@ namespace huffmanInterface
 
         public readBitByBit(string fileName)
         {
-            FileStream fs = File.OpenRead(fileName);  //creating an input file stream
+            FileStream fs;
+            try
+            {
+                 fs = File.OpenRead(fileName);  //creating an input file stream
+
+            }
+            catch
+            {
+                throw new ArgumentException("A file should be uploaded.");
+            }
+
             inputFile = new BufferedStream(fs);      //opening stream in buffer to make it faster
             currentByte = inputFile.ReadByte();      //reading a byte from the file
             flag = 1;   //as we already read 1st byte
