@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Diagnostics;
 
 namespace huffmanInterface
 {
@@ -22,37 +23,37 @@ namespace huffmanInterface
 
 
 
-
-
         //counting frequency and adding in map
         public Dictionary<char, int> frequency(FileStream fs)
         {
-            var sr = new StreamReader(fs);  //opening file
 
-            int c;
-            while ((c = sr.Read()) != -1)               //reading character 8 bits from file as int and converting it in char
+            using (var sr = new StreamReader(fs))
             {
-              
-                try
+                while (!sr.EndOfStream)
                 {
-                    frequencyMap.Add((char)c, 1);     //adding characters in the in dictionary to calculate frequecy if they arent already
-                    HuffmanCode.Add((char)c, "");     //initializing the code dictionary       
+                    string s = sr.ReadLine();
+                    Debug.WriteLine(s); //to check string read from file
+                    foreach (char c in s)
+                    {
+                        if (frequencyMap.ContainsKey(c))
+                            frequencyMap[c]++;
+                        else
+                            frequencyMap.Add(c, 1);
+                    }
                 }
-                catch
-                {
-                    frequencyMap[(char)c] += 1; //if they are in the dictionary just plus there frequency
-                }
-
-                //}
-
             }
 
+            try
+            {
+                frequencyMap.Add((char)Pseudo_EOF, 1);
+            }
+            catch
+            {
+                frequencyMap.Remove((char)Pseudo_EOF);
+                frequencyMap.Add((char)Pseudo_EOF, 1);
+            }
 
-            //Console.Write((char)c);
-            //Console.WriteLine("char: " + (char)c + "int: " + c);
-            //if (c != 10){
-            frequencyMap.Add((char)Pseudo_EOF, 1);
-            sr.Close();
+            // sr.Close();
             fs.Close();
             return frequencyMap;
         }
@@ -162,30 +163,31 @@ namespace huffmanInterface
             // bit.ByteWrite((char)244);    //storing the end of the tree
             //bit.BitWrite(0);
 
-
-            var sr = new StreamReader(fs);   //opeining input file to be compreesed so to read from it and compare and store
-            int c;
             string code = "0";
-            while ((c = sr.Read()) != -1)   //reading char from input file
+            using (var sr1 = new StreamReader(fs))
             {
-                //Console.WriteLine("char: " + (char)c  + "int: " + c);
-                try   //while calculating frequencies we don't calculate 10 which is LF so we use try to avoid exception when 10 comes as it is not present in the HuffmanCode directory
+                while (!sr1.EndOfStream)
                 {
-                    code = HuffmanCode[(char)c];   //reading character's huffman code from th Code table
-                }
-                catch
-                {
+                    string s = sr1.ReadLine();
+                   // Debug.WriteLine(s); //to check string read from file
+                    foreach (char ch in s)
+                    {
+                        if (frequencyMap.ContainsKey(ch))
+                            code = HuffmanCode[ch];   //reading character's huffman code from th Code table
 
-                }
-                for (int i = 0; i < code.Length; ++i)    //reading each character from the Huffman code  like if code for A = 011 the first 0 then 1 and then 1
-                {
-                    if (code[i] == '0')
-                        bit.BitWrite(0);                //calling writing function with 0 
-                    else
-                        bit.BitWrite(1);               //calling writing function with 1
+                        for (int i = 0; i < code.Length; ++i)    //reading each character from the Huffman code  like if code for A = 011 the first 0 then 1 and then 1
+                        {
+                            if (code[i] == '0')
+                                bit.BitWrite(0);                //calling writing function with 0 
+                            else
+                                bit.BitWrite(1);               //calling writing function with 1
 
+                        }
+
+                    }
                 }
             }
+
             //now we need to write psedu_EOF so that we don't reed extra bytes from the file
             code = HuffmanCode[(char)Pseudo_EOF];
             for (int i = 0; i < code.Length; ++i)    //reading each character from the Huffman code  like if code for A = 011 the first 0 then 1 and then 1
@@ -312,3 +314,29 @@ namespace huffmanInterface
 
     }
 }
+
+/*
+             var sr = new StreamReader(fs);   //opeining input file to be compreesed so to read from it and compare and store
+            int c;
+            string code = "0";
+            while ((c = sr.Read()) != -1)   //reading char from input file
+            {
+                //Console.WriteLine("char: " + (char)c  + "int: " + c);
+                try   //while calculating frequencies we don't calculate 10 which is LF so we use try to avoid exception when 10 comes as it is not present in the HuffmanCode directory
+                {
+                    code = HuffmanCode[(char)c];   //reading character's huffman code from th Code table
+                }
+                catch
+                {
+
+                }
+                for (int i = 0; i < code.Length; ++i)    //reading each character from the Huffman code  like if code for A = 011 the first 0 then 1 and then 1
+                {
+                    if (code[i] == '0')
+                        bit.BitWrite(0);                //calling writing function with 0 
+                    else
+                        bit.BitWrite(1);               //calling writing function with 1
+
+                }
+            }
+     */

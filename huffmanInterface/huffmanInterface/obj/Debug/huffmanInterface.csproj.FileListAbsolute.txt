@@ -92,3 +92,5 @@ C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanIn
 C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Debug\Xceed.Words.NET.dll
 C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Debug\DocumentFormat.OpenXml.xml
 C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Debug\System.IO.Packaging.xml
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Debug\System.IO.FileSystem.Primitives.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Debug\System.IO.Packaging.dll

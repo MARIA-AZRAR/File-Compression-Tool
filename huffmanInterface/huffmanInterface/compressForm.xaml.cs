@@ -241,6 +241,7 @@ namespace huffmanInterface
                 }
 
                 MessageBox.Show(myObj.CompName);
+                MessageBox.Show("File Saved");
             }
         }
     }
