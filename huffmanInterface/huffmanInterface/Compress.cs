@@ -310,29 +310,3 @@ namespace huffmanInterface
 
     }
 }
-
-/*
-             var sr = new StreamReader(fs);   //opeining input file to be compreesed so to read from it and compare and store
-            int c;
-            string code = "0";
-            while ((c = sr.Read()) != -1)   //reading char from input file
-            {
-                //Console.WriteLine("char: " + (char)c  + "int: " + c);
-                try   //while calculating frequencies we don't calculate 10 which is LF so we use try to avoid exception when 10 comes as it is not present in the HuffmanCode directory
-                {
-                    code = HuffmanCode[(char)c];   //reading character's huffman code from th Code table
-                }
-                catch
-                {
-
-                }
-                for (int i = 0; i < code.Length; ++i)    //reading each character from the Huffman code  like if code for A = 011 the first 0 then 1 and then 1
-                {
-                    if (code[i] == '0')
-                        bit.BitWrite(0);                //calling writing function with 0 
-                    else
-                        bit.BitWrite(1);               //calling writing function with 1
-
-                }
-            }
-     */
