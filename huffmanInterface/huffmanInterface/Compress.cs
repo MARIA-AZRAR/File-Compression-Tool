@@ -246,19 +246,15 @@ namespace huffmanInterface
         {
             foreach (char c in s)
             {
-                //   Console.WriteLine(c);
-                try
+                if (frequencyMap.ContainsKey(c))
+                    frequencyMap[c]++;
+                else
                 {
                     frequencyMap.Add(c, 1);     //adding characters in the in dictionary to calculate frequecy if they arent already
                     HuffmanCode.Add(c, "");     //initializing the code dictionary       
                 }
-                catch
-                {
-                    frequencyMap[c] += 1; //if they are in the dictionary just plus there frequency
-                }
-
             }
-
+        
             frequencyMap.Add((char)Pseudo_EOF, 1);
             return frequencyMap;
         }
@@ -282,11 +278,11 @@ namespace huffmanInterface
             for (int i = 0; i < content.Length; ++i)   //reading char from string containg input
             {
                 Console.WriteLine(content[i]);
-                try   //while calculating frequencies we don't calculate 10 which is LF so we use try to avoid exception when 10 comes as it is not present in the HuffmanCode directory
+                if (HuffmanCode.ContainsKey(content[i]))
                 {
                     code = HuffmanCode[content[i]];   //reading character's huffman code from th Code table
                 }
-                catch
+                else
                 {
                     //if not fount in table do nothing
                 }
