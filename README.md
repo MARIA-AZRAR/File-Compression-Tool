@@ -1,5 +1,5 @@
 # CS311S20PID36
-A File Compressor Tool that is built using WPF framework. It can compress txt, cpp, c, cs, csv, pdf, doc and docx files.
+A File Compressor Tool that is built using WPF framework. It can compress txt, cpp, c, cs, csv, pdf and docx files.
 ### Programming Languages, Tools and software (IDEs) used for Project implementation:
 
 |**Sr. No.**   |  **Software** |**Version**   |**Reason** |
