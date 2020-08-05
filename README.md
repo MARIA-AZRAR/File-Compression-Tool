@@ -13,7 +13,7 @@ A File Compressor Tool that is built using WPF framework. It can compress txt, c
 
 ### Project Configuration Guidelines (Step by Step):
 **1.**  Download the Project from `GitHub` and open in `Visual Studio`. <br><br>
-**2.**	Although Packages folder contain packages but if there are any errors you need to download the required packages from `NuGet Package Manager`. <br><br>
+**2.**	Although Packages folder contain packages but **if there are any errors** you need to download the required packages from `NuGet Package Manager`. <br><br>
 **3.**	At total three packages are required **iTextSharp**, **DocumentFormat.OpenXml**, **DocX**. You can download these in visual studio. Go to `Tools > NuGet Package Manager > Manage NuGet Packages for Solution` <br><br>
 ![NuGet](huffmanInterface/huffmanInterface/Assets/S1.png) <br><br>
 **4.**	From there in Browse Window, Search the required package. <br><br>
