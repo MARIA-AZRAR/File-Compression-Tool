@@ -109,10 +109,19 @@ namespace huffmanInterface
                 }
             }
             bit.close();
-            string newC = content.Substring(3);
-            for (int i = 0; i < content.Length; ++i)
+
+            string newC = null;
+            try
             {
-                Console.Write(content[i]);
+                newC = content.Substring(3);   // in case of empty file
+              //  for (int i = 0; i < content.Length; ++i)
+                //{
+                  //  Console.Write(content[i]);
+                //}
+            }
+            catch
+            {
+
             }
 
             //create pdf
@@ -128,7 +137,7 @@ namespace huffmanInterface
             }
    
 
-            if(fileExten == ".docx" || fileExten == ".doc"){
+            if(fileExten == ".docx"){
                 var doc = DocX.Create(decmpFile);
                 doc.InsertParagraph(newC).Font("Times New Roman").FontSize(12d);  //inserting paragraph
                 doc.Save();

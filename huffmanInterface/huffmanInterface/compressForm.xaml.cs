@@ -108,34 +108,53 @@ namespace huffmanInterface
             //myObj.comleteFlag = 0;
 
           
-            if (fileExt == ".pdf" || fileExt == ".docx" || fileExt == ".doc")
+            if (fileExt == ".pdf" || fileExt == ".docx")
             {
-                if (fileExt == ".docx" || fileExt == ".doc")
+                if (fileExt == ".docx")
                 {
 
 
                     // Open a WordprocessingDocument based on a filepath.
-                    using (WordprocessingDocument wordDocument =
-                        WordprocessingDocument.Open(fileName, false))
+                    try
                     {
-                        // Assign a reference to the existing document body.  
-                        Body body = wordDocument.MainDocumentPart.Document.Body;
+                        using (WordprocessingDocument wordDocument =
+                      WordprocessingDocument.Open(fileName, false))
+                        {
+                            // Assign a reference to the existing document body.  
+                            Body body = wordDocument.MainDocumentPart.Document.Body;
 
-                        //Saving the text of Docx file in a strin content
-                        content =  body.InnerText.ToString();
+                            //Saving the text of Docx file in a strin content
+                            content = body.InnerText.ToString();
+                        }
                     }
+                    catch
+                    {
+                        MessageBox.Show("File is used by another Process");
+                        throw new ArgumentException("File is used by another Process.");
+                    }
+
                 }
                 if(fileExt == ".pdf")
                 {
-                    StringBuilder fileContent = new StringBuilder();
-                    using (PdfReader pdfReader = new PdfReader(filename))
+                    try
                     {
-                        for (int k = 1; k <= pdfReader.NumberOfPages; k++)
+                        StringBuilder fileContent = new StringBuilder();
+                        using (PdfReader pdfReader = new PdfReader(filename))
                         {
-                            fileContent.Append(PdfTextExtractor.GetTextFromPage(pdfReader, k));
+                            for (int k = 1; k <= pdfReader.NumberOfPages; k++)
+                            {
+                                fileContent.Append(PdfTextExtractor.GetTextFromPage(pdfReader, k));
+                            }
                         }
+                        content = fileContent.ToString();
                     }
-                    content = fileContent.ToString();
+                    catch
+                    {
+                        MessageBox.Show("File is used by another Process");
+                        throw new ArgumentException("File is used by another Process.");
+
+                    }
+
                 }
                 //string content;
 
@@ -164,8 +183,16 @@ namespace huffmanInterface
             }
             else
             {
-
-                FileStream fs = File.OpenRead(fileName);
+                FileStream fs;
+                try
+                {
+                    fs = File.OpenRead(fileName);
+                }
+                catch
+                {
+                    MessageBox.Show("No File has been Uploaded");
+                    throw new ArgumentException("A file should be uploaded.");
+                }
                 //String fs = File.ReadAllText(fileName);
 
                 Dictionary<char, int> Dic = new Dictionary<char, int>();
@@ -189,18 +216,10 @@ namespace huffmanInterface
                 myObj.HuffCode(top, "");
                 myObj.printCodes(myObj.HuffmanCode);
 
-
-                //writing tree in file
-                //top = myObj.root; //temporary storing the value
-                //myObj.EncodingTreeWrite(top);
                 top = myObj.root; //temporary storing the value
-                //  myObj.printPreorder(top);
-                 //Console.WriteLine("Tree Printed");
 
-                //fileCompress in button save
             }
 
-            // myObj.comleteFlag = 1;
             MessageBox.Show("Compress Done Save File.");
 
         }
@@ -208,18 +227,15 @@ namespace huffmanInterface
         private void SaveCompressFile_Click(object sender, RoutedEventArgs e)
         {
             SaveFileDialog saveFile = new SaveFileDialog();
-            saveFile.FileName = "Codes"; ;
+            saveFile.FileName = "Compressed"; ;
             saveFile.DefaultExt = fileExt;
-            // saveFile.Filter = "Text documents (.txt)|*.txt";
-
             bool? response = saveFile.ShowDialog();
             if (response == true)
             {
                 myObj.CompName = saveFile.FileName;
-                //FileStream fs1 = File.Create(myObj.CompName);
 
                 //compressing file
-                if (fileExt == ".pdf" || fileExt == ".docx" || fileExt == ".doc")
+                if (fileExt == ".pdf" || fileExt == ".docx")
                 {
                     //compress file
                     myObj.PDFCompressFile(content);

@@ -1,0 +1,45 @@
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Release\huffmanInterface.exe.config
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Release\huffmanInterface.exe
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Release\huffmanInterface.pdb
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Release\DeltaCompressionDotNet.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Release\DeltaCompressionDotNet.MsDelta.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Release\DeltaCompressionDotNet.PatchApi.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Release\DocumentFormat.OpenXml.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Release\itextsharp.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Release\Mono.Cecil.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Release\Mono.Cecil.Mdb.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Release\Mono.Cecil.Pdb.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Release\Mono.Cecil.Rocks.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Release\NuGet.Squirrel.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Release\SharpCompress.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Release\Splat.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Release\Squirrel.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Release\System.IO.FileSystem.Primitives.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Release\System.IO.Packaging.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Release\Xceed.Document.NET.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Release\Xceed.Words.NET.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Release\DocumentFormat.OpenXml.xml
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Release\itextsharp.xml
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Release\NuGet.Squirrel.pdb
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Release\Splat.pdb
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Release\Squirrel.pdb
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Release\System.IO.Packaging.xml
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Release\Compression Beast.csprojAssemblyReference.cache
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Release\compressForm.g.cs
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Release\decompressForm.g.cs
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Release\MainWindow.g.cs
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Release\App.g.cs
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Release\huffmanInterface_MarkupCompile.cache
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Release\huffmanInterface_MarkupCompile.lref
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Release\App.baml
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Release\buttonTheme.baml
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Release\compressForm.baml
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Release\decompressForm.baml
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Release\MainWindow.baml
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Release\huffmanInterface.g.resources
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Release\huffmanInterface.Properties.Resources.resources
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Release\Compression Beast.csproj.GenerateResource.cache
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Release\Compression Beast.csproj.CoreCompileInputs.cache
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Release\Compression Beast.csproj.CopyComplete
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Release\huffmanInterface.exe
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Release\huffmanInterface.pdb

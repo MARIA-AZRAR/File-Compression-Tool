@@ -97,7 +97,7 @@ namespace huffmanInterface
             {
                 decomp.decmpFile = saveFile.FileName;   //file name after decompress
                 //Decompressing file
-                if (fileExt == ".pdf" || fileExt == ".docx" || fileExt == ".doc")
+                if (fileExt == ".pdf" || fileExt == ".docx")
                 {
 
                     //decompress

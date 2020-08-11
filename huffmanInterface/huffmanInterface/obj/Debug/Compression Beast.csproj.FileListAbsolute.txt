@@ -1,0 +1,31 @@
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Debug\huffmanInterface.exe.config
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Debug\huffmanInterface.exe
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Debug\huffmanInterface.pdb
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Debug\itextsharp.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Debug\System.IO.FileSystem.Primitives.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Debug\System.IO.Packaging.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Debug\Xceed.Document.NET.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Debug\Xceed.Words.NET.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Debug\itextsharp.xml
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Debug\System.IO.Packaging.xml
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Debug\Compression Beast.csprojAssemblyReference.cache
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Debug\compressForm.g.cs
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Debug\decompressForm.g.cs
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Debug\MainWindow.g.cs
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Debug\App.g.cs
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface_MarkupCompile.cache
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface_MarkupCompile.lref
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Debug\App.baml
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Debug\buttonTheme.baml
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Debug\compressForm.baml
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Debug\decompressForm.baml
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Debug\MainWindow.baml
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface.g.resources
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface.Properties.Resources.resources
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Debug\Compression Beast.csproj.GenerateResource.cache
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Debug\Compression Beast.csproj.CoreCompileInputs.cache
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Debug\Compression Beast.csproj.CopyComplete
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface.exe
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface.pdb

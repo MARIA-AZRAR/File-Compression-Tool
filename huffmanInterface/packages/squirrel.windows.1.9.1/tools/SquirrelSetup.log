@@ -1,0 +1,8 @@
+﻿2020-08-11 13:28:04> Program: Starting Squirrel Updater: --releasify CompressionBeast.1.0.0.nupkg
+2020-08-11 13:28:04> Program: Bootstrapper EXE found at:C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\packages\squirrel.windows.1.9.1\tools\Setup.exe
+2020-08-11 13:28:04> Program: Creating release package: C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\Releases\CompressionBeast.1.0.0.nupkg
+2020-08-11 13:28:04> ReleasePackage: Creating release package: C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\Releases\CompressionBeast.1.0.0.nupkg => C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\Releases\CompressionBeast-1.0.0-full.nupkg
+2020-08-11 13:28:07> ReleasePackage: Extracting dependent packages: []
+2020-08-11 13:28:07> ReleasePackage: Removing unnecessary data
+2020-08-11 13:28:07> ReleasePackage: No release notes found in C:\Users\probook 430\AppData\Local\SquirrelTemp\tempc\CompressionBeast.nuspec
+2020-08-11 13:28:10> Program: Building embedded zip file for Setup.exe

@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/zip.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("796_xtr_icon.ico")]
 
 

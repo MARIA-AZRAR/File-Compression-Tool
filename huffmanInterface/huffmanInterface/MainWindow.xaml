@@ -180,7 +180,7 @@
             </StackPanel>
 
             <StackPanel VerticalAlignment="Center" Height="368" Margin="-10,202,0,30"  >
-                <TextBlock Text="-It can compress .txt, .cpp, .c, .cs, .docx, .doc, .pdf, .csv 
+                <TextBlock Text="-It can compress .txt, .cpp, .c, .cs, .docx, .pdf, .csv 
                                   -File To be Compressed should be greater than 250 bytes.
                                    -PDF or .docx files can't have images. 
                                    -Once Compression Done Dialogue appears then save file.
