@@ -138,9 +138,9 @@
                 </Border.Background>
             </Border>
             <StackPanel VerticalAlignment="Top"  >
-                <TextBlock Text="File Compression Tool"
+                <TextBlock Text="Compression Beast"
                           FontWeight="UltraBold"
-                          FontFamily="Giddyup Std"
+                          Style="{StaticResource coolFont}"
                           FontSize="60"
                            FontStretch="UltraExpanded"
                            TextWrapping="Wrap"

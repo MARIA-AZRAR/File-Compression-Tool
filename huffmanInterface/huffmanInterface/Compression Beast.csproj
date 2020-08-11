@@ -170,6 +170,9 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Resource Include="fonts\RobotoMono-Light.ttf" />
+    <Resource Include="fonts\28 Days Later.ttf" />
+    <Resource Include="fonts\TH3 MACHINE.ttf" />
+    <Resource Include="fonts\CracklingFire.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -8,10 +8,13 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary  Source="buttonTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-        
-     
-        
+            <Style x:Key = "coolFont">
+                <Setter Property="TextElement.FontFamily" 
+                    Value="/fonts/#CracklingFire">
+                </Setter>
+            </Style>
+            <FontFamily x:Key="Welc">./fonts/TH3 MACHINE.ttf#TH3 MACHINE</FontFamily>
 
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -140,9 +140,9 @@
                 </Border.Background>
             </Border>
             <StackPanel VerticalAlignment="Top" Height="242" Margin="0,-69,0,0"  >
-                <TextBlock Text="File Compression Tool"
+                <TextBlock Text="Compression Beast"
+                         Style="{StaticResource coolFont}"
                           FontWeight="UltraBold"
-                          FontFamily="Giddyup Std"
                           FontSize="60"
                            FontStretch="UltraExpanded"
                            TextWrapping="Wrap"
@@ -154,10 +154,10 @@
             </StackPanel>
 
             <StackPanel VerticalAlignment="Center" Height="230" Margin="0,52,0,318"  >
-                <TextBlock Text="   W E L C O M E"
+                <TextBlock Text="    W E L C O M E"
                           FontWeight="UltraBold"
-                          FontFamily="Letter Gothic Std"
-                          FontSize="35"
+                          FontFamily="{StaticResource Welc}"
+                          FontSize="45"
                            FontStretch="UltraExpanded"
                            TextWrapping="Wrap"
                           Foreground="#FF9AF9F9"

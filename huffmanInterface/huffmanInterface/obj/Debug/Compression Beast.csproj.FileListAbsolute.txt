@@ -29,3 +29,17 @@ C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanIn
 C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Debug\Compression Beast.csproj.CopyComplete
 C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface.exe
 C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\obj\Debug\huffmanInterface.pdb
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Debug\DeltaCompressionDotNet.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Debug\DeltaCompressionDotNet.MsDelta.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Debug\DeltaCompressionDotNet.PatchApi.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Debug\Mono.Cecil.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Debug\Mono.Cecil.Mdb.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Debug\Mono.Cecil.Pdb.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Debug\Mono.Cecil.Rocks.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Debug\NuGet.Squirrel.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Debug\SharpCompress.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Debug\Splat.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Debug\Squirrel.dll
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Debug\NuGet.Squirrel.pdb
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Debug\Splat.pdb
+C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\huffmanInterface\huffmanInterface\bin\Debug\Squirrel.pdb
