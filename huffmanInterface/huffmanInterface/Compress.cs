@@ -247,6 +247,7 @@ namespace huffmanInterface
             fs.Close();
         }
 
+
         //writing tree
         public void printHeaderTree(PQueue.cNode top, writeBitByBit bit)
         {

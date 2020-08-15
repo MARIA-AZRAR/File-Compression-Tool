@@ -16,15 +16,15 @@ using iTextSharp.text.pdf.parser;
 using iTextSharp.text;
 using Microsoft.Win32;
 using System.IO;
-using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Wordprocessing;
+using Microsoft.Office.Interop.Word;
+using Application = Microsoft.Office.Interop.Word.Application;
 
 namespace huffmanInterface
 {
     /// <summary>
     /// Interaction logic for compressForm.xaml
     /// </summary>
-    public partial class compressForm : Window
+    public partial class compressForm : System.Windows.Window
     {
         public compressForm()
         {
@@ -115,18 +115,22 @@ namespace huffmanInterface
                 {
 
 
-                    // Open a WordprocessingDocument based on a filepath.
                     try
                     {
-                        using (WordprocessingDocument wordDocument =
-                      WordprocessingDocument.Open(fileName, false))
-                        {
-                            // Assign a reference to the existing document body.  
-                            Body body = wordDocument.MainDocumentPart.Document.Body;
+                        // Open a doc file.
+                        Application app = new Application();
+                        Microsoft.Office.Interop.Word.Document document = app.Documents.Open(fileName);
 
-                            //Saving the text of Docx file in a strin content
-                            content = body.InnerText.ToString();
+                        // Select all words from word file
+                        int total = document.Words.Count;
+                        for (int i = 1; i <= total; i++)
+                        {
+                            // Reading from word document into a string
+                            content += document.Words[i].Text;
                         }
+                        // Close word.
+                        Console.WriteLine(content);
+                        app.Quit();
                     }
                     catch
                     {
