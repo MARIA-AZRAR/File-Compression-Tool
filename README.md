@@ -12,7 +12,7 @@ A File Compressor Tool that is built using WPF framework. It can compress txt, c
 | **6**  | Package: `DocX`  | 	1.7.0	  |  DocX is a .NET library that allows developers to manipulate Microsoft Word files. Here it is used to create a new Word file and write data in it. |
 
 ### Project Configuration Guidelines (Step by Step):
-**1.**  Download Desktop Applicatioon from this [Link](https://drive.google.com/drive/folders/1AeiPpnTMHkb_9c0eEJbx2_RkT0cAt9Vs?usp=sharing). <br><br>
+**1.**  Download Desktop Application from this [Link](https://drive.google.com/drive/folders/1AeiPpnTMHkb_9c0eEJbx2_RkT0cAt9Vs?usp=sharing). <br><br>
 **2.**	Inside there are four file cick on `Setup.exe`. This will install the Application on your Device. <br><br>
 **3.**	Run the Application, On Home Page some `intructions` are given read them carefully. <br><br>
 
