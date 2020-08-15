@@ -98,6 +98,7 @@ namespace huffmanInterface
             {
                 fileName = openFile.FileName;
                 fileExt = System.IO.Path.GetExtension(openFile.FileName);
+                myObj.fileExten1 = fileExt;   //seeting up exttension name for compress.c
                 MessageBox.Show(System.IO.Path.GetExtension(openFile.FileName));
             }
         }

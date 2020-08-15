@@ -16,7 +16,7 @@ namespace huffmanInterface
         public PQueue.cNode root;                  //root of the huffman tree
         public StreamWriter treeFile;         //file to store tree
         public StreamWriter compressFile;         //file to store CompreesFiles\\
-
+        public string fileExten1;   // file extension stoing var
 
         public string CompName;   //compressed file name
         public int comleteFlag;
@@ -26,35 +26,59 @@ namespace huffmanInterface
         //counting frequency and adding in map
         public Dictionary<char, int> frequency(FileStream fs)
         {
-
-            using (var sr = new StreamReader(fs))
+            if (fileExten1 == ".csv")   //code for csv is different because that code cause problem with csv files
             {
-                while (!sr.EndOfStream)
+                var sr = new StreamReader(fs);  //opening file
+                int c;
+                while ((c = sr.Read()) != -1)               //reading character 8 bits from file as int and converting it in char
                 {
-                    string s = sr.ReadLine();
-                    Debug.WriteLine(s); //to check string read from file
-                    foreach (char c in s)
+                    Console.Write((char)c);
+                    if (frequencyMap.ContainsKey((char)c))
                     {
-                        if (frequencyMap.ContainsKey(c))
-                            frequencyMap[c]++;
-                        else
-                            frequencyMap.Add(c, 1);
+                        frequencyMap[(char)c] += 1; //if they are in the dictionary just plus there frequency
+
+                    }
+                    else
+                    {
+                        frequencyMap.Add((char)c, 1);     //adding characters in the in dictionary to calculate frequecy if they arent already
+                        HuffmanCode.Add((char)c, "");     //initializing the code dictionary       
                     }
                 }
-            }
 
-            try
-            {
                 frequencyMap.Add((char)Pseudo_EOF, 1);
+                sr.Close();
+                fs.Close();
             }
-            catch
+            else
             {
-                frequencyMap.Remove((char)Pseudo_EOF);
-                frequencyMap.Add((char)Pseudo_EOF, 1);
-            }
+                using (var sr = new StreamReader(fs))
+                {
+                    while (!sr.EndOfStream)
+                    {
+                        string s = sr.ReadLine();
+                        Debug.WriteLine(s); //to check string read from file
+                        foreach (char c in s)
+                        {
+                            if (frequencyMap.ContainsKey(c))
+                                frequencyMap[c]++;
+                            else
+                                frequencyMap.Add(c, 1);
+                        }
+                    }
+                }
 
-            // sr.Close();
-            fs.Close();
+                try
+                {
+                    frequencyMap.Add((char)Pseudo_EOF, 1);
+                }
+                catch
+                {
+                    frequencyMap.Remove((char)Pseudo_EOF);
+                    frequencyMap.Add((char)Pseudo_EOF, 1);
+                }
+
+                fs.Close();
+            }
             return frequencyMap;
         }
 
@@ -151,8 +175,6 @@ namespace huffmanInterface
         //Writng Compress File
         public void WriteCompressFile(FileStream fs)
         {
-            //string fileName = "compress.cmu";
-
 
             // Create a new file
             writeBitByBit bit = new writeBitByBit(CompName);  //creating an instance of bit write
@@ -160,33 +182,56 @@ namespace huffmanInterface
             //writing tree info
             PQueue.cNode top = root;
             printHeaderTree(top, bit);
-            // bit.ByteWrite((char)244);    //storing the end of the tree
-            //bit.BitWrite(0);
-
             string code = "0";
-            using (var sr1 = new StreamReader(fs))
-            {
-                while (!sr1.EndOfStream)
+
+            if (fileExten1 == ".csv")  //code for csv is different because that code cause problem with csv files
+            {  
+                var sr = new StreamReader(fs);   //opeining input file to be compreesed so to read from it and compare and store
+                int c;
+                while ((c = sr.Read()) != -1)   //reading char from input file
                 {
-                    string s = sr1.ReadLine();
-                   // Debug.WriteLine(s); //to check string read from file
-                    foreach (char ch in s)
+                    if (frequencyMap.ContainsKey((char)c)) //while calculating frequencies we don't calculate 10 which is LF so we use try to avoid exception when 10 comes as it is not present in the HuffmanCode directory
                     {
-                        if (frequencyMap.ContainsKey(ch))
-                            code = HuffmanCode[ch];   //reading character's huffman code from th Code table
+                        code = HuffmanCode[(char)c];   //reading character's huffman code from th Code table
+                    }
 
-                        for (int i = 0; i < code.Length; ++i)    //reading each character from the Huffman code  like if code for A = 011 the first 0 then 1 and then 1
-                        {
-                            if (code[i] == '0')
-                                bit.BitWrite(0);                //calling writing function with 0 
-                            else
-                                bit.BitWrite(1);               //calling writing function with 1
-
-                        }
+                    for (int i = 0; i < code.Length; ++i)    //reading each character from the Huffman code  like if code for A = 011 the first 0 then 1 and then 1
+                    {
+                        if (code[i] == '0')
+                            bit.BitWrite(0);                //calling writing function with 0 
+                        else
+                            bit.BitWrite(1);               //calling writing function with 1
 
                     }
                 }
             }
+
+            else   //code for .txt and .cpp .c .cs
+            {
+                using (var sr1 = new StreamReader(fs))
+                {
+                    while (!sr1.EndOfStream)
+                    {
+                        string s = sr1.ReadLine();
+                        foreach (char ch in s)
+                        {
+                            if (frequencyMap.ContainsKey(ch))
+                                code = HuffmanCode[ch];   //reading character's huffman code from th Code table
+
+                            for (int i = 0; i < code.Length; ++i)    //reading each character from the Huffman code  like if code for A = 011 the first 0 then 1 and then 1
+                            {
+                                if (code[i] == '0')
+                                    bit.BitWrite(0);                //calling writing function with 0 
+                                else
+                                    bit.BitWrite(1);               //calling writing function with 1
+
+                            }
+
+                        }
+                    }
+                }
+            }
+
 
             //now we need to write psedu_EOF so that we don't reed extra bytes from the file
             code = HuffmanCode[(char)Pseudo_EOF];
@@ -197,7 +242,9 @@ namespace huffmanInterface
                 else
                     bit.BitWrite(1);               //calling writing function with 1
             }
+
             bit.close();
+            fs.Close();
         }
 
         //writing tree
@@ -257,6 +304,7 @@ namespace huffmanInterface
         
             frequencyMap.Add((char)Pseudo_EOF, 1);
             return frequencyMap;
+            
         }
 
         //compressing pdf file
