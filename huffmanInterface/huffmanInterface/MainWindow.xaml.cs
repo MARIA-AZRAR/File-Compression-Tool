@@ -24,17 +24,7 @@ namespace huffmanInterface
         public MainWindow()
         {
             InitializeComponent();
-            UpdateApplication();
         }
-
-        private async Task UpdateApplication()
-        {
-           using (var manager = new UpdateManager(@"C:\Users\probook 430\Desktop\Semester 4\AOA\Term Project\Final Project\ReleaseU"))  //this could be an online thing
-           {
-               await manager.UpdateApp();
-           }
-        }
-
         //Function to view different list items 
         private void ListViewItem_MouseEnter(object sender, MouseEventArgs e)
         {

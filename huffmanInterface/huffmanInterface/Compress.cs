@@ -32,7 +32,6 @@ namespace huffmanInterface
                 int c;
                 while ((c = sr.Read()) != -1)               //reading character 8 bits from file as int and converting it in char
                 {
-                    Console.Write((char)c);
                     if (frequencyMap.ContainsKey((char)c))
                     {
                         frequencyMap[(char)c] += 1; //if they are in the dictionary just plus there frequency
@@ -56,7 +55,7 @@ namespace huffmanInterface
                     while (!sr.EndOfStream)
                     {
                         string s = sr.ReadLine();
-                        Debug.WriteLine(s); //to check string read from file
+                        //Debug.WriteLine(s); //to check string read from file
                         foreach (char c in s)
                         {
                             if (frequencyMap.ContainsKey(c))
@@ -89,7 +88,6 @@ namespace huffmanInterface
             {
                 Console.WriteLine("Key = {0}, Value = {1}",
                  kvp.Key, kvp.Value);
-                //  Console.WriteLine("{0} , {1} ", kvp.Key, kvp.Value);
             }
             Console.ReadLine();
 
@@ -102,7 +100,6 @@ namespace huffmanInterface
             {
                 Console.WriteLine("Value       = {0}, Codes            = {1}",
                  kvp.Key, kvp.Value);
-                //  Console.WriteLine("{0} , {1} ", kvp.Key, kvp.Value);
             }
             Console.ReadLine();
 
@@ -138,8 +135,6 @@ namespace huffmanInterface
                 node.frequency = node.leftZero.frequency + node.rightOne.frequency;
                 node.value = '~';                               //just adding a temp value to middle nodes
                 pQueue.insertWithPriority(node);
-                pQueue.print();
-                //Console.WriteLine("Inserted");
                 n = pQueue.count;
             }
             return pQueue.Top();

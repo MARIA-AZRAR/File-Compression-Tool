@@ -165,7 +165,7 @@ namespace huffmanInterface
 
                 Dictionary<char, int> Dic = new Dictionary<char, int>();
                 Dic = myObj.frequencyPDF(content);
-                myObj.printMap(Dic);
+              //  myObj.printMap(Dic);
 
                 //getting frequency
 
@@ -183,7 +183,7 @@ namespace huffmanInterface
 
                 // Console.WriteLine(top.getValue());
                 myObj.HuffCode(top, "");
-                myObj.printCodes(myObj.HuffmanCode);
+               // myObj.printCodes(myObj.HuffmanCode);
 
             }
             else
@@ -203,14 +203,14 @@ namespace huffmanInterface
                 Dictionary<char, int> Dic = new Dictionary<char, int>();
                 //Dic = myObj.frequency(fs);
                 Dic = myObj.frequency(fs);
-                myObj.printMap(Dic);
+               // myObj.printMap(Dic);
 
                 //getting frequency
                 //entering data in nodes then storing them in queue
                 PQueue.PriorityQueue pQueue = new PQueue.PriorityQueue();
                 pQueue = myObj.nodesinQueue(Dic);
 
-                pQueue.print();
+               // pQueue.print();
 
                 //creating encooding tree
                 myObj.root = myObj.HuffmanEncoding(pQueue);
@@ -219,7 +219,7 @@ namespace huffmanInterface
 
                 // Console.WriteLine(top.getValue());
                 myObj.HuffCode(top, "");
-                myObj.printCodes(myObj.HuffmanCode);
+               // myObj.printCodes(myObj.HuffmanCode);
 
                 top = myObj.root; //temporary storing the value
 

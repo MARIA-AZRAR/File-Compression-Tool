@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-using iTextSharp.text;
-using iTextSharp.text.pdf.parser;
-using iTextSharp.text.pdf;
+
 
 namespace HuffmanAlgoImplementation
 {

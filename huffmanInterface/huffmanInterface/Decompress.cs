@@ -71,14 +71,12 @@ namespace huffmanInterface
         {
             readBitByBit bit = new readBitByBit(fileName);
             FileTreeroot = ReadTreeHeader(bit);
-            Console.WriteLine("insode decompress");
             program.printPreorder(FileTreeroot);
 
 
             int returnbit = -1;  //initializing
             char leaf = '1'; //checking if we reached the end of file
             string content = null;  //initializing
-            // PQueue.cNode top = root;
             PQueue.cNode top = FileTreeroot;
 
             while (true)  //will run until we found the pseduo_EOF
@@ -114,10 +112,6 @@ namespace huffmanInterface
             try
             {
                 newC = content.Substring(3);   // in case of empty file
-              //  for (int i = 0; i < content.Length; ++i)
-                //{
-                  //  Console.Write(content[i]);
-                //}
             }
             catch
             {
@@ -154,16 +148,13 @@ namespace huffmanInterface
 
             if (c == '1')
             {
-                Console.WriteLine("inside 1 : ");
                 node = new PQueue.cNode();
                 node.value = bit.ByteRead();
-                Console.WriteLine("inside 1 value: " + node.value);
                 return node;
             }
 
             else
             {
-                Console.WriteLine("inside 0");
                 PQueue.cNode leftChild = ReadTreeHeader(bit);
                 PQueue.cNode rightChild = ReadTreeHeader(bit);
                 node = new PQueue.cNode('0', leftChild, rightChild);

@@ -222,6 +222,27 @@ namespace HuffmanAlgoImplementation
         }
 
 
+        public void printPreorder(PQueue.cNode node)
+        {
+            if (node == null)
+                return;
+
+            /* first print data of node */
+            if (node.leftZero == null && node.rightOne == null)
+            {
+                Console.Write(node.value + " ");
+
+            }
+
+            /* then recur on left sutree */
+            printPreorder(node.leftZero);
+
+            /* now recur on right subtree */
+            printPreorder(node.rightOne);
+        }
+
+
+
         static void Main(string[] args)
         {
              Program myComp = new Program(); //creating instance of the main file
