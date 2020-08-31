@@ -63,70 +63,13 @@ namespace HuffmanAlgoImplementation
 
         //decompress the file
 
-        public void pdfDecompress(string fileName)
-        {
-            readBitByBit bit = new readBitByBit(fileName);
-            FileTreeroot = ReadTreeHeader(bit);
-            Console.WriteLine("insode decompress");
-            program.printPreorder(FileTreeroot);
-
-
-            int returnbit = -1;  //initializing
-            char leaf = '1'; //checking if we reached the end of file
-            string content = null;  //initializing
-            // PQueue.cNode top = root;
-            PQueue.cNode top = FileTreeroot;
-
-            while (true)  //will run until we found the pseduo_EOF
-            {
-
-                if (top.leftZero == null && top.rightOne == null)  //if leaf node is reached
-                {
-                    leaf = top.value;
-                    if (leaf == (char)program.Pseudo_EOF)   //if it is last letter close the file
-                    {
-                        break;
-                    }
-                    else
-                    {
-                        content = content + leaf.ToString();
-                    }
-                    top = FileTreeroot;   //again start from root
-                }
-
-                returnbit = bit.bitRead();
-                if (returnbit == 0)  //if not leaf keep on reading the file
-                {
-                    top = top.leftZero;
-                }
-                else if (returnbit == 1)
-                {
-                    top = top.rightOne;
-                }
-            }
-            bit.close();
-            string newC = content.Substring(3);
-            for (int i = 0; i < content.Length; ++i)
-            {
-                Console.Write(content[i]);
-            }
-
-            //create pdf
-            Document document = new Document(PageSize.A4, 50, 35, 50, 35);
-            PdfWriter pdfWriter = PdfWriter.GetInstance(document, new FileStream("decompress.pdf", FileMode.Create));
-            document.Open();
-            Paragraph p = new Paragraph();
-            p.Font = FontFactory.GetFont(FontFactory.TIMES_ROMAN, 12f, BaseColor.BLACK);
-            p.Add(newC);
-            document.Add(p);
-            document.Close();
-        }
+    
 
 
 
         public PQueue.cNode ReadTreeHeader(readBitByBit bit)
         {
-            char c = bit.ByteRead();
+            char c = bit.();
             PQueue.cNode node = new PQueue.cNode();
 
             if (c == '1')
